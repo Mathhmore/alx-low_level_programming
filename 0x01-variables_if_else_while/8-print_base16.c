@@ -7,12 +7,12 @@
 int main(void)
 {
 	int num;
+	char chr;
 
 	for (num = 0; num <= 9; num++)
 	{
 		putchar(num +  '0');
 	}
-	char chr;
 
 	for (chr = 'a'; chr <= 'f'; chr++)
 	{
