@@ -14,10 +14,6 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	last_dig = n % 10;
-	if (last_dig < 0)
-	{
-		last_dig = last_dig * -1;
-	}
 
 	if (last_dig > 5)
 	{
