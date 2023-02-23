@@ -3,7 +3,7 @@
 
 /**
  * print_square - print a square using #s
- * @sizw: size of the square
+ * @size: size of the square
  * Return: void
  */
 void print_square(int size)
