@@ -16,7 +16,7 @@ void print_rev(char *str)
 		str++;
 	}
 	str--;
-	while (str_len >= 0)
+	while (str_len > 0)
 	{
 		putchar(str[str_len]);
 		str_len--;
