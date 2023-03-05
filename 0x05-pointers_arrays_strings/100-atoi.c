@@ -73,6 +73,8 @@ int _atoi(char *s)
 		}
 		if (numc > 0 && !(*s >= '0' && *s <= '9'))
 			break;
+		else
+			continue;
 		s++;
 	}
 	num = sign * num;
