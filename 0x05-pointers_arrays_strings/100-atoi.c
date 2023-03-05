@@ -40,29 +40,26 @@ int atoi(char *s)
 		{
 			int cr;
 
-			switch (*s)
-			{
-				case '0':
-					cr = 0;
-				case '1':
-					cr = 1;
-				case '2':
-					cr = 2;
-				case '3':
-					cr = 3;
-				case '4':
-					cr = 4;
-				case '5':
-					cr = 5;
-				case '6':
-					cr = 6;
-				case '7':
-					cr = 7;
-				case '8':
-					cr = 8;
-				case '9':
-					cr = 9;
-			}
+			if (*s == '0')
+				cr = 0;
+			else if (*s == '1')
+				cr = 1;
+			else if (*s == '2')
+				cr = 2;
+			else if (*s == '3')
+				cr = 3;
+			else if (*s == '4')
+				cr = 4;
+			else if (*s == '5')
+				cr = 5;
+			else if (*s == '6')
+				cr = 6;
+			else if (*s == '7')
+				cr = 7;
+			else if (*s == '8')
+				cr = 8;
+			else if (*s == '9')
+				cr = 9;
 			num = num * pow(10, numc) + cr;
 			numc++;
 		}
