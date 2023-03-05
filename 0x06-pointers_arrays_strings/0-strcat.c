@@ -24,7 +24,7 @@ int _strlen(char *str)
  * @src: string to be appended
  * Return: the pointer to dest
  */
-char *_strcat(char *iest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int str_len_src = _strlen(src);
 	int str_len_dest = _strlen(dest);
