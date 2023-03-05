@@ -35,4 +35,5 @@ void puts_half(char *str)
 		putchar(str[i]);
 		i++;
 	}
+	putchar('\0');
 }
