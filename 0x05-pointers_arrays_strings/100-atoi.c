@@ -60,10 +60,13 @@ int _atoi(char *s)
 				cr = 8;
 			else if (*s == '9')
 				cr = 9;
-			int n = 1;
+			int n;
+			n = 1;
 			if (numc > 0)
 			{
-				for (int i = 0; i < numc; i++)
+				int i;
+
+				for (i = 0; i < numc; i++)
 					n *= 10;
 			}
 			num = num * n + cr;
