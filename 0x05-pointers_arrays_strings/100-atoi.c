@@ -22,7 +22,7 @@ int digit(char *str)
 }
 
 /**
- * sign_count - counts - signes
+ * signOf - counts - signes
  * @str: string given
  * Return: number of -s
  */
@@ -42,7 +42,7 @@ int signOf(char *str)
 		str++;
 	}
 	if (count % 2 != 0)
-		s = -1
+		s = -1;
 	return (s);
 }
 
