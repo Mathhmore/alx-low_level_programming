@@ -38,7 +38,7 @@ int atoi(char *s)
 	{
 		if (*s >= '0' && *s <= '9')
 		{
-			int cr = s + 0;
+			int cr = s - 48;
 
 			num = num * pow(10, numc) + cr;
 			numc++;
