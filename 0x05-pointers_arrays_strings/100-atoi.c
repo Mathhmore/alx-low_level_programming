@@ -40,7 +40,7 @@ int atoi(char *s)
 		{
 			int cr;
 
-			switch (s)
+			switch (*s)
 			{
 				case '0':
 					cr = 0;
@@ -61,7 +61,7 @@ int atoi(char *s)
 				case '8':
 					cr = 8;
 				case '9':
-					cr = '9'
+					cr = 9;
 			}
 			num = num * pow(10, numc) + cr;
 			numc++;
