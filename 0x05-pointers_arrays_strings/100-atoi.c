@@ -13,10 +13,13 @@ int sign_count(char *str)
 
 	while (*str != '\0')
 	{
-		if (*str >= '0' && *str <= '9')
-			break;
-		else if (*str == '-')
+		if (*str == '-')
+		{
 			count++;
+			continue;
+		}
+		else if (*str >= '0' && *str <= '9')
+			break;
 	}
 	return (count);
 }
