@@ -19,7 +19,7 @@ int _strlen(char *str)
 }
 
 /**
- * trcpy - copies a string
+ * _trcpy - copies a string
  * @dest: string destination
  * @src: string to be coppied
  * Return: the pointer to dest
