@@ -24,7 +24,7 @@ int _strlen(char *str)
  * @src: string to be appended
  * Return: the pointer to dest
  */
-char *_strcpy(char *dest, char *src)
+char *_strcat(char *iest, char *src)
 {
 	int str_len_src = _strlen(src);
 	int str_len_dest = _strlen(dest);
@@ -35,7 +35,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[i] = src[j];
 		i++;
-		j++;
+		j++i
 	}
 	dest[i++] = '\0';
 	return (dest);
