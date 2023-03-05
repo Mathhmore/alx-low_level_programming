@@ -23,7 +23,7 @@ int _strlen(char *str)
  * @str: string given
  * Return: void
  */
-void rev_string(char *str)
+void puts_half(char *str)
 {
 	int str_len = _strlen(str);
 	int i = str_len / 2;
