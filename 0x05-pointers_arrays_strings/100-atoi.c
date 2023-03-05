@@ -28,11 +28,9 @@ int sign_count(char *str)
  */
 int _atoi(char *s)
 {
-	int sign, num = 0, numc = 0, n = 1;
+	int sign = 1, num = 0, numc = 0, n = 1;
 	
-	if (sign_count(s) % 2 == 0)
-		sign = 1;
-	else
+	if ((sign_count(s) % 2) != 0)
 		sign = -1;
 	while (*s != '\0')
 	{
