@@ -3,13 +3,32 @@
 #include <math.h>
 
 /**
+ * digit - find the first digit in a given string
+ * str: given string
+ * Return: index of the first digit
+ */
+int digit(char *str)
+{
+	int c = 0;
+
+	while (*str != '\0')
+	{
+		if (*str >= '0' && *str <= '9')
+			return (c);
+		c++;
+		str++;
+	}
+	return (-1);
+}
+
+/**
  * sign_count - counts - signes
  * @str: string given
  * Return: number of -s
  */
-int sign_count(char *str)
+int signOf(char *str)
 {
-	int count = 0;
+	int count = 0, s = 1;
 
 	while (*str != '\0')
 	{
@@ -20,8 +39,11 @@ int sign_count(char *str)
 		}
 		else if (*str >= '0' && *str <= '9')
 			break;
+		str++;
 	}
-	return (count);
+	if (count % 2 != 0)
+		s = -1
+	return (s);
 }
 
 /**
@@ -31,10 +53,9 @@ int sign_count(char *str)
  */
 int _atoi(char *s)
 {
-	int sign = 1, num = 0, numc = 0, n = 1;
+	int num = 0, numc = 0, n = 1, sign;
 	
-	if ((sign_count(s) % 2) != 0)
-		sign = -1;
+	sign = signOf(s);
 	while (*s != '\0')
 	{
 		if (*s >= '0' && *s <= '9')
