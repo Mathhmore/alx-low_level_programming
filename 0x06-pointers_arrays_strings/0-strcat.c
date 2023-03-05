@@ -28,13 +28,11 @@ char *_strcat(char *dest, char *src)
 {
 	int str_len_dest = _strlen(dest);
 	int i = str_len_dest;
-	int j = 0;
 
 	while (*src != '\0')
 	{
-		dest[i] = src[j];
+		dest[i] = *src;
 		i++;
-		j++;
 		src++;
 	}
 	dest[i] = '\0';
