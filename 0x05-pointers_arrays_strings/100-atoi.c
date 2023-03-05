@@ -26,7 +26,7 @@ int sign_count(char *str)
  * @s: string given
  * Return: converted int
  */
-int atoi(char *s)
+int _atoi(char *s)
 {
 	int sign, num = 0, numc = 0;
 	
