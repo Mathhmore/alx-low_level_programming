@@ -28,7 +28,7 @@ void _print_rev_recursion(char *s)
 	int len = _strlen(s);
 	int i = len - 1;
 
-	if (len > 0 && *s != '\0')
+	if (i >= 0 && *s != '\0')
 	{
 		putchar(s[i]);
 		i--;
