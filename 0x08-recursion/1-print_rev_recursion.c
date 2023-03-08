@@ -7,7 +7,7 @@
  */
 int _strlen(char *str)
 {
-	int count;
+	int count = 0;
 
 	if (*str != '\0')
 	{
