@@ -8,7 +8,9 @@
  */
 int help_prime(int n, int num)
 {
-	if (n != num && n % num == 0)
+	if (n == 1)
+		return (0);
+	else if (n != num && n % num == 0)
 		return (0);
 	else if (n == num)
 		return (1);
@@ -22,5 +24,5 @@ int help_prime(int n, int num)
  */
 int is_prime_number(int n)
 {
-	return (help_prime(n, 1));
+	return (help_prime(n, 2));
 }
