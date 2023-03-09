@@ -17,7 +17,7 @@ int help_sqrt(int n, int t)
 	else if (t * t > n)
 		return (-1);
 	t++;
-	help_sqrt(n, t);
+	return (help_sqrt(n, t));
 }
 
 /**
