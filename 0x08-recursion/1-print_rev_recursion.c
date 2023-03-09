@@ -7,15 +7,12 @@
  */
 int _strlen(char *str)
 {
-	int count = 0;
-
-	if (*str != '\0')
+	if (*str == '\0')
 	{
-		count++;
-		str++;
-		_strlen(str);
+		return (0);
 	}
-	return (count);
+	str++;
+	return (1 + _strlen(str));
 }
 
 /**
