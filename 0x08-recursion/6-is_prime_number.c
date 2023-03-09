@@ -15,7 +15,7 @@ int help_prime(int n, int num)
 	else if (n == num)
 		return (1);
 	num++;
-	return (help_prime(n ,num));
+	return (help_prime(n, num));
 }
 /**
  * is_prime_number - prime or not
