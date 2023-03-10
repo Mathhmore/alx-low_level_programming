@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 /**
  * main - entry point
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
 	{
 		for (c = 1; c < argc; c++)
 		{
-			if (isdigit(argv[c][0]) != 0)
+			if (isdigit(argv[c][0]) != 0 && isdigit(argv[c][strlen(argv[c]) - 1]))
 				sum += atoi(argv[c]);
 			else
 			{
