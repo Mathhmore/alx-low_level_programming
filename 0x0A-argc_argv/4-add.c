@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	{
 		for (c = 1; c < argc; c++)
 		{
-			if (isdigit(argv[c][0]) != 0 && isdigit(argv[c][strlen(argv[c]) - 1]))
+			if (isdigit(argv[c][0]) != 0 && isdigit(argv[c][strlen(argv[c]) - 1]) && isdigit(argv[c][strlen(argv[c]) / 2]))
 				sum += atoi(argv[c]);
 			else
 			{
