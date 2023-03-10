@@ -9,8 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int r, change = 0, num = atoi(argv[1]), cents[] = {25, 10, 5, 2, 1};
-	int i = 0;
+	int r, change = 0, num;
 
 	if (argc != 2)
 	{
@@ -22,31 +21,18 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	if (num >= 25)
-		i = 0;
-	else if (num >= 10)
-		i = 1;
-	else if (num >= 5)
-		i = 2;
-	else if (num >= 2)
-		i = 3;
-	else if (num >= 1)
-		i = 4;
+	num = atoi(argv[1]);
 	r = num;
-	if (argc == 2)
-	{
-		while (i < 5)
-		{
-			change += r / cents[i];
-			r = r % cents[i];
-			i++;
-		}
-		printf("%d\n", change);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	change += r / 25;
+	r = r % 25;
+	change += r / 10;
+	r = r % 10;
+	change += r / 5;
+	r = r % 5;
+	change += r / 2;
+	r = r % 2;
+	change += r;
+
+	printf("%d\n", change);
 	return (0);
 }
