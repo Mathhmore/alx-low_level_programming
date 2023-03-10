@@ -11,5 +11,8 @@ int main(int argc, char *argv[])
 {
 	if (argc > 0)
 		printf("%d\n", argc - 1);
+	if (argv[0])
+	{
+	}
 	return (0);
 }
