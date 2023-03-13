@@ -11,7 +11,11 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 
-	char array[size] = c;
+	char array[size];
+	int i;
+
+	for (i = 0; i < size; i++)
+		array[i] = c;
 
 	return (array);
 }
