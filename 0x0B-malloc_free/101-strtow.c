@@ -18,7 +18,7 @@ char **strtow(char *str)
 		if (str[i] == ' ')
 			ns += 1;
 	}
-	new = malloc(sizeof(4193);
+	new = malloc(4193);
 
 	if (new == NULL)
 		return (NULL);
