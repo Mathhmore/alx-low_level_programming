@@ -29,7 +29,7 @@ char **strtow(char *str)
 			new[j][k] = str[i];
 			++k;
 		}
-		if (str[i] == ' ' || str[i] == '\0')
+		if ((str[i] == ' ' && str[i + 1] != ' ') || str[i] == '\0')
 		{
 			k = 0;
 			++j;
