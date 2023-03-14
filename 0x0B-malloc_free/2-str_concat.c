@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (i = 0; i < strlen(s1); i++)
 		concat_str[i] = s1[i];
-	for (i = strlen(s1); i < (strlen(s1) + strlen(s2)); i++;)
+	for (i = strlen(s1); i < (strlen(s1) + strlen(s2)); i++)
 	{
 		concat_str[i] = s2[j];
 		j++;
