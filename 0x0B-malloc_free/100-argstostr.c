@@ -28,8 +28,9 @@ char *argstostr(int ac, char **av)
 		{
 			str[k] = av[i][j];
 			k++;
+			if (j == strlen(av[i]) - 1)
+				str[k] = '\n';
 		}
-		str[k] = '\n';
 	}
 	return (str);
 }
