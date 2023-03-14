@@ -32,7 +32,7 @@ char **strtow(char *str)
 		return (NULL);
 	while (str[i] != '\0')
 	{
-		p[i] = malloc(sizeof(char) * l);
+		new[i] = malloc(sizeof(char) * l);
 		if (str[i] != ' ')
 		{
 			new[j][k] = str[i];
