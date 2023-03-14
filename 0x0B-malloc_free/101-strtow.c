@@ -23,7 +23,7 @@ char **strtow(char *str)
 		return (NULL);
 	if (str[0] == ' ' && l == 1)
 		return (NULL);
-	new = malloc(4193);
+	new = malloc(sizeof(char *) * l);
 
 	if (new == NULL)
 		return (NULL);
