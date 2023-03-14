@@ -9,20 +9,20 @@ char **strtow(char *str)
 {
 	char **new;
 	int ns = 0, j, k;
-	unsigned int i;
+	int i = 0;
 
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
-	for (i = 0; i < strlen(str); i++)
+	/*for (i = 0; i < strlen(str); i++)
 	{
 		if (str[i] == ' ')
 			ns += 1;
-	}
+	}*/
 	new = malloc(4193);
 
 	if (new == NULL)
 		return (NULL);
-	for (i = 0; i < strlen(str); i++)
+	while (str[i] != '\0')
 	{
 		if (str[i] != ' ')
 		{
@@ -34,6 +34,7 @@ char **strtow(char *str)
 			k = 0;
 			++j;
 		}
+		i++;
 	}
 	return (new);
 }
