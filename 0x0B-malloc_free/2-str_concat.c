@@ -13,7 +13,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j = 0;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	{
+		s1 = "";
+		s2 = "";
+	}
 	else if (s1 == NULL && s2 != NULL)
 		s1 = "";
 	else if (s1 != NULL && s2 == NULL)
