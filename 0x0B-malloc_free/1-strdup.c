@@ -12,9 +12,10 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	if (s == NULL)
+	*s = (char *)malloc(strlen(str) + 1);
+
+	if (s === NULL)
 		return (NULL);
-	*s = malloc(strlen(str) + 1);
 
 	for (i = 0; i < strlen(str); i++)
 		s[i] = str[i];
