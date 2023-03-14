@@ -8,9 +8,9 @@
 char *_strdup(char *str)
 {
 	char *s = malloc(strlen(str));
-	int i;
+	long unsigned int i;
 
-	if (str == NULL || s = NULL)
+	if (str == NULL || s == NULL)
 		return (NULL);
 	for (i = 0; i < strlen(str); i++)
 		s[i] = str[i];
