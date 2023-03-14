@@ -44,7 +44,9 @@ char **strtow(char *str)
 			k = 0;
 			++j;
 		}
+		free(new[i]);
 		i++;
 	}
+	free(new);
 	return (new);
 }
