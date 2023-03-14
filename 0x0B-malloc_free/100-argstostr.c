@@ -26,7 +26,8 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; j < strlen(av[i]); j++)
 		{
-			str[k++] = av[i][j];
+			k++;
+			str[k] = av[i][j];
 			if (j == strlen(av[i]) - 1)
 				str[k++] = '\n';
 		}
