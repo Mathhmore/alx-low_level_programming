@@ -29,8 +29,9 @@ char **strtow(char *str)
 			new[j][k] = str[i];
 			++k;
 		}
-		if (str[i] == ' ')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
+			k = 0;
 			++j;
 		}
 	}
