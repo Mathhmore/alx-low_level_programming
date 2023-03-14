@@ -9,21 +9,30 @@ char **strtow(char *str)
 {
 	char **new;
 	int j, k;
-	int i = 0;
+	int i = 0, l = 0;
 
-	if (str == NULL || strlen(str) == 0)
+	while (str[i] != '\0')
+	{
+		l += 1;
+		i++;
+	}
+	i = 0;
+	if (l == 0)
+		return (NULL);
+	if (str[0] == ' ' && l == 1)
 		return (NULL);
 	/*for (i = 0; i < strlen(str); i++)
 	{
 		if (str[i] == ' ')
 			ns += 1;
 	}*/
-	new = malloc(4193);
+	new = malloc(sizeof(char *) * l);
 
 	if (new == NULL)
 		return (NULL);
 	while (str[i] != '\0')
 	{
+		p[i] = malloc(sizeof(char) * l);
 		if (str[i] != ' ')
 		{
 			new[j][k] = str[i];
