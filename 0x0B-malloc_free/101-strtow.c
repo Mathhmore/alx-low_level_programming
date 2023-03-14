@@ -8,7 +8,7 @@
 char **strtow(char *str)
 {
 	char **new;
-	int j, k;
+	int j, k = 0;
 	int i = 0, l = 0;
 
 	if (str == NULL)
@@ -23,11 +23,6 @@ char **strtow(char *str)
 		return (NULL);
 	if (str[0] == ' ' && l == 1)
 		return (NULL);
-	/*for (i = 0; i < strlen(str); i++)
-	{
-		if (str[i] == ' ')
-			ns += 1;
-	}*/
 	new = malloc(4193);
 
 	if (new == NULL)
