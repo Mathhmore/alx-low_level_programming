@@ -10,8 +10,11 @@ char *_strdup(char *str)
 	char *s = malloc(strlen(str) + 1);
 	long unsigned int i;
 
-	if (str == NULL || s == NULL)
+	if (str == NULL)
 		return (NULL);
+	if (s == NULL)
+		return (NULL);
+
 	for (i = 0; i < strlen(str); i++)
 		s[i] = str[i];
 
