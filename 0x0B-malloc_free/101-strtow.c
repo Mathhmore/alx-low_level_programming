@@ -11,6 +11,8 @@ char **strtow(char *str)
 	int j, k;
 	int i = 0, l = 0;
 
+	if (str == NULL)
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		l += 1;
