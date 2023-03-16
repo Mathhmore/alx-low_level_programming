@@ -8,7 +8,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char **allocated_space;
+	void *allocated_space;
 	unsigned int i;
 
 	allocated_space = malloc(nmemb * size);
@@ -16,8 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	while (i < nmemb)
 	{
-		allocated_space[i] = malloc(size);
-		allocated_space[i] = 0;
+		(char *)allocated_space[i] = 0;
 		i++;
 	}
 	return (allocated_space);
