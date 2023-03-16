@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	while (i < nmemb)
 	{
-		(char *)allocated_space[i] = 0;
+		*((char *)allocated_space + i) = 0;
 		i++;
 	}
 	return (allocated_space);
