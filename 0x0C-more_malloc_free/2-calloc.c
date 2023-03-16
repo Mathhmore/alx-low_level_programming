@@ -11,6 +11,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *allocated_space;
 	unsigned int i = 0;
 
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 	allocated_space = malloc(nmemb * size);
 	if (allocated_space == NULL)
 		return (NULL);
