@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < strlen(argv[2]); i++)
 	{
-		if (isdigit(argv[2]) == 0)
+		if (isdigit(argv[2][i]) == 0)
 		{
 			printf("Error\n");
 			exit(98);
