@@ -6,9 +6,9 @@
  * @size: size of each elements of the array
  * Return: a pointer to the allocated memory and exit 98 if fail
  */
-void *calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *allocated_space;
+	char **allocated_space;
 	unsigned int i;
 
 	allocated_space = malloc(nmemb * size);
