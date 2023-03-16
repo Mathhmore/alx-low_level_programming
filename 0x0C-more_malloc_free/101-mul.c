@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	unsigned int i;
 
-	if (argc != 2)
+	if (argc - 1 != 2)
 	{
 		printf("Error\n");
 		exit(98);
