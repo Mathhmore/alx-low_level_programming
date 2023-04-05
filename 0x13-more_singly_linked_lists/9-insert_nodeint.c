@@ -5,6 +5,7 @@
  * @head: head of the list
  * @idx: index given
  * @n: value for the new node
+ * Return: address of the new node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
@@ -33,6 +34,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			free(new);
 			return (NULL);
 		}
+	}
+	if (idx > i + 1)
+	{
+		free(new);
+		return (NULL)
 	}
 	new->next = h->next;
 	h->next = new;
