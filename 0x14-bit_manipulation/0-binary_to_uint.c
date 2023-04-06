@@ -7,11 +7,10 @@
  */
 int check_chars(const char *bb)
 {
-	unsigned int i;
 
-	for (i = 0; i < strlen(bb); i++)
+	while (*bb != '\0')
 	{
-		if (bb[i] != '0' && bb[i] != '1')
+		if (*bb != '0' && *bb != '1')
 			return (0);
 	}
 	return (1);
