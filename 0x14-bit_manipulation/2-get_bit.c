@@ -23,9 +23,10 @@ int get_bit(unsigned long int n, unsigned int index)
 		h_n = h_n << length;
 	while (h_n > 0)
 	{
-		if (index = length)
+		if (index = count)
 			return (h_n & n);
 		h_n = h_n >> 1;
+		count--;
 	}
 	return (-1);
 }
