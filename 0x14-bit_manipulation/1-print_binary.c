@@ -22,9 +22,9 @@ void print_binary(unsigned long int n)
 	while (h_n > 0)
 	{
 		if (h_n & n)
-			putchar('1');
+			_putchar('1');
 		else
-			putchar('0');
+			_putchar('0');
 		h_n = h_n >> 1;
 	}
 }
