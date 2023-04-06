@@ -12,6 +12,7 @@ int check_chars(const char *bb)
 	{
 		if (*bb != '0' && *bb != '1')
 			return (0);
+		bb++;
 	}
 	return (1);
 }
