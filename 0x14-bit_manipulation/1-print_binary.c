@@ -17,7 +17,8 @@ void print_binary(unsigned long int n)
 		an = an << 1;
 	}
 	length -= 1;
-	h_n = h_n << length;
+	if (length > 0)
+		h_n = h_n << length;
 	while (h_n > 0)
 	{
 		if (h_n & n)
