@@ -46,9 +46,9 @@ unsigned int binary_to_uint(const char *b)
 	int check = check_chars(b);
 
 	j = len - 1;
-	if (check == 0)
-		return (0);
 	if (b == NULL)
+		return (0);
+	if (check == 0)
 		return (0);
 	while (*b != '\0')
 	{
