@@ -4,7 +4,7 @@
 /**
  * binary_to_uint - changes binary to an int
  * @b: a binary number given
- * Return the converted number or 0 if b is NULL ora bit is not 0 or 1
+ * Return: the converted number or 0 if b is NULL ora bit is not 0 or 1
  */
 unsigned int binary_to_uint(const char *b)
 {
