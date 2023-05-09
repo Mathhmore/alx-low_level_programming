@@ -2,9 +2,9 @@
 
 /**
  * print_error - prints error messages and exits with exit value
- * @error: num is either exit value or file descriptor
- * @s: str is a name, either of the two filenames
- * @fd: file descriptor
+ * @flag: flag is exit value or file descriptor
+ * @str: str is a name, either of the two filenames
+ * @fl: file descriptor
  * Return: 0 on success
  */
 int print_error(int flag, char *str, int fl)
