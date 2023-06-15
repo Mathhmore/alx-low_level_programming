@@ -24,14 +24,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new_node->next = s;
 		*h = new_node;
 	}
+	s = *h;
 	else if (idx == 0)
-	{
-		s = *h;
-		new_node->prev = NULL;
-		new_node->next = s;
-		s->prev = new_node;
-		*h = new_node;
-	}
+		new_node = add_dnodeint(&s, n);
+	else if (idx == len(*h))
+		new_node = add_dnodeint_end(&s, n);
 	else
 	{
 		s = *h;
