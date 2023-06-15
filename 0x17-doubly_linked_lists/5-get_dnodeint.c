@@ -7,7 +7,7 @@
  */
 size_t len(dlistint_t *h)
 {
-	unsigned int c;
+	unsigned int c = 0;
 
 	while (h != NULL)
 	{
