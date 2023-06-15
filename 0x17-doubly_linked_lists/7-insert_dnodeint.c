@@ -21,6 +21,7 @@ size_t len(dlistint_t *h)
  * @h: head of the list
  * @idx: index
  * @n: value for the new node
+ * Return: pointer to the new node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -32,7 +33,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	new_node->n = n;
 	s = *h;
-	if (*h == NULL && idx > 0)
+	if ((*h == NULL && idx > 0) || idx > len(*h))
 		return (NULL);
 	if (*h == NULL)
 	{
@@ -45,8 +46,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new_node = add_dnodeint(&s, n);
 	else if (idx == len(*h))
 		new_node = add_dnodeint_end(&s, n);
-	else if (idx > len(*h))
-		return (NULL);
 	else
 	{
 		s = *h;
