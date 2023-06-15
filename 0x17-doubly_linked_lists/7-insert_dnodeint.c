@@ -1,6 +1,22 @@
 #include "lists.h"
 
 /**
+ * len - finds length of a list
+ * @h: head of the list
+ * Return: length of the list
+ */
+size_t len(dlistint_t *h)
+{
+	unsigned int count = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
+}
+/**
  * insert_dnodeint_at_index - inserts a node at a given index
  * @h: head of the list
  * @idx: index
@@ -15,6 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->n = n;
+	s = *h;
 	if (*h == NULL && idx > 0)
 		return (NULL);
 	if (*h == NULL)
@@ -24,7 +41,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new_node->next = s;
 		*h = new_node;
 	}
-	s = *h;
 	else if (idx == 0)
 		new_node = add_dnodeint(&s, n);
 	else if (idx == len(*h))
