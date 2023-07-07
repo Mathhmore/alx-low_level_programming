@@ -15,7 +15,7 @@ int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
 	char *k;
 	char *val;
 
-	node = malloc(sizeof(hash_node_t));
+	h = malloc(sizeof(hash_node_t));
 	if (h == NULL)
 		return (0);
 
@@ -64,10 +64,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	idx = key_index((const unsigned char *)key, ht->size);
 
-	node = (ht->array)[idx];
-	while (node && (strcmp(key, node->key) != 0))
-		node = node->next;
-	if (node != NULL)
+	h = (ht->array)[idx];
+	while (h && (strcmp(key, h->key) != 0))
+		h = h->next;
+	if (h != NULL)
 	{
 		val = strdup(value);
 		if (!val)
