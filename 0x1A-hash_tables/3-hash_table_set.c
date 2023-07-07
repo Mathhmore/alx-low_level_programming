@@ -1,50 +1,82 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - sets a key value paired on a hash table
- * @key: a key for the the value
- * @value: value
+ * create_and_add_node - malloc, set values, and insert node into hash table
  * @ht: hash table
- * Return: 1 if it succeeded 0 otherwise
+ * @key: key; can't be empty string
+ * @value: value
+ * @idx: index to insert in at hash table
+ * Return: 1 if success, 0 if fail
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
+			unsigned long int idx)
 {
 	hash_node_t *h = NULL;
-	unsigned long int idx;
-	hash_node_t **arr;
-	char *k, *val;
+	char *k;
+	char *val;
+
+	node = malloc(sizeof(hash_node_t));
+	if (h == NULL)
+		return (0);
 
 	k = strdup(key);
-	if (k == NULL)
+	if (!k)
 	{
 		free(h);
 		return (0);
 	}
+
 	val = strdup(value);
-	if (val == NULL)
+	if (!val)
 	{
 		free(k);
 		free(h);
 		return (0);
 	}
-	h = malloc(sizeof(hash_node_t));
-	if (h == NULL)
-		return (0);
-	arr = malloc(sizeof(*arr));
-	if (arr == NULL)
-		return (0);
-	idx = key_index((const unsigned char *)key, ht->size);
-	if (!ht || !(ht->array) || !key || strlen(key) == 0 || !value)
-		return (0);
-	h->key = k;
-	h->value = val;
-	/*if (arr[idx] != NULL)
-		arr[0] = val;
-	else
-		arr[idx] = val;*/
-	if ((ht->array)[idx] == NULL)
+
 	h->key = k;
 	h->value = val;
 
+	if ((ht->array)[idx] == NULL)
+		h->next = NULL;
+	else
+		h->next = (ht->array)[idx];
+	(ht->array)[idx] = h;
+
 	return (1);
+}
+
+/**
+ * hash_table_set - add element to hash table
+ * @ht: hash table
+ * @key: key; can't be empty string
+ * @value: value
+ * Return: 1 if success, 0 if fail
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	unsigned long int idx;
+	hash_node_t *h = NULL;
+	char *val;
+
+	if (!ht || !(ht->array) || !key || strlen(key) == 0 || !value)
+		return (0);
+
+	idx = key_index((const unsigned char *)key, ht->size);
+
+	node = (ht->array)[idx];
+	while (node && (strcmp(key, node->key) != 0))
+		node = node->next;
+	if (node != NULL)
+	{
+		val = strdup(value);
+		if (!val)
+			return (0);
+		if (h->value)
+			free(h->value);
+		h->value = val;
+		return (1);
+	}
+
+	return (create_and_add_node(ht, key, value, idx));
 }
